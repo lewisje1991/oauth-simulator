@@ -5,3 +5,6 @@ start-server:
 start-client:
 	@echo "Starting client..."
 	@cd client && go run main.go
+
+generate-private-key:
+	@openssl ecparam -genkey -name prime256v1 -noout -out private.ec.key
